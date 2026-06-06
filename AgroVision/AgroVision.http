@@ -1,0 +1,6 @@
+@AgroVision_HostAddress = http://localhost:5039
+
+GET {{AgroVision_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
