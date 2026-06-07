@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgroVision", "AgroVision\AgroVision.csproj", "{8353A4EA-1DF1-4331-AED9-B51CA8D63111}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgroVision.Domain", "AgroVision.Domain\AgroVision.Domain.csproj", "{43508D99-704A-486A-8C39-735EA943BCB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{8353A4EA-1DF1-4331-AED9-B51CA8D63111}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8353A4EA-1DF1-4331-AED9-B51CA8D63111}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8353A4EA-1DF1-4331-AED9-B51CA8D63111}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43508D99-704A-486A-8C39-735EA943BCB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43508D99-704A-486A-8C39-735EA943BCB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43508D99-704A-486A-8C39-735EA943BCB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43508D99-704A-486A-8C39-735EA943BCB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
