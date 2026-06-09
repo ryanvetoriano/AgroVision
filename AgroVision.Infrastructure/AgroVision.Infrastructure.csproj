@@ -13,6 +13,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\AgroVision.Application\AgroVision.Application.csproj" />
       <ProjectReference Include="..\AgroVision.Domain\AgroVision.Domain.csproj" />
     </ItemGroup>
 

@@ -1,4 +1,6 @@
-﻿using AgroVision.Infrastructure.Persistence;
+﻿using AgroVision.Application.Interfaces.Repositories;
+using AgroVision.Infrastructure.Persistence;
+using AgroVision.Infrastructure.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,6 +17,18 @@ public static class DependencyInjection
 
         services.AddDbContext<AgroVisionContext>(options =>
             options.UseOracle(connectionString));
+
+        services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+        services.AddScoped<IPlantacaoRepository, PlantacaoRepository>();
+        services.AddScoped<ISafraRepository, SafraRepository>();
+        services.AddScoped<IInsumoRepository, InsumoRepository>();
+        services.AddScoped<IAnaliseDroneRepository, AnaliseDroneRepository>();
+        services.AddScoped<IDroneRepository, DroneRepository>();
+        services.AddScoped<IMissaoDroneRepository, MissaoDroneRepository>();
+        services.AddScoped<ILeituraSensorRepository, LeituraSensorRepository>();
+        services.AddScoped<IOcorrenciaPlantacaoRepository, OcorrenciaPlantacaoRepository>();
+        services.AddScoped<IRecomendacaoAgronomicaRepository, RecomendacaoAgronomicaRepository>();
+        services.AddScoped<ILogErroRepository, LogErroRepository>();
 
         return services;
     }
