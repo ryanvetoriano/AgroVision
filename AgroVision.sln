@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgroVision", "AgroVision\AgroVision.csproj", "{8353A4EA-1DF1-4331-AED9-B51CA8D63111}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgroVision.API", "AgroVision.API\AgroVision.API.csproj", "{8353A4EA-1DF1-4331-AED9-B51CA8D63111}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgroVision.Domain", "AgroVision.Domain\AgroVision.Domain.csproj", "{43508D99-704A-486A-8C39-735EA943BCB3}"
 EndProject
