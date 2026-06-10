@@ -2,6 +2,7 @@
 using AgroVision.Application.Interfaces.Repositories;
 using AgroVision.Application.Interfaces.Services;
 using AgroVision.Domain.Entities;
+using AgroVision.Domain.Exceptions;
 
 namespace AgroVision.Application.Services;
 
@@ -61,14 +62,14 @@ public class AnaliseDroneService : IAnaliseDroneService
         var plantacaoExiste = await _plantacaoRepository.ExistsAsync(dto.PlantacaoId);
 
         if (!plantacaoExiste)
-            throw new Exception("Plantação informada não encontrada.");
+            throw new DomainException("Plantação informada não encontrada.");
 
         if (dto.MissaoDroneId is not null)
         {
             var missaoExiste = await _missaoDroneRepository.ExistsAsync(dto.MissaoDroneId.Value);
 
             if (!missaoExiste)
-                throw new Exception("Missão de drone informada não encontrada.");
+                throw new DomainException("Missão de drone informada não encontrada.");
         }
 
         var analise = new AnaliseDrone(

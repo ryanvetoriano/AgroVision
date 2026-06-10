@@ -2,6 +2,7 @@
 using AgroVision.Application.Interfaces.Repositories;
 using AgroVision.Application.Interfaces.Services;
 using AgroVision.Domain.Entities;
+using AgroVision.Domain.Exceptions;
 
 namespace AgroVision.Application.Services;
 
@@ -51,7 +52,7 @@ public class InsumoService : IInsumoService
         var plantacaoExiste = await _plantacaoRepository.ExistsAsync(dto.PlantacaoId);
 
         if (!plantacaoExiste)
-            throw new Exception("Plantação informada não encontrada.");
+            throw new DomainException("Plantação informada não encontrada.");
 
         var insumo = new Insumo(
             dto.PlantacaoId,

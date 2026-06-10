@@ -2,6 +2,7 @@
 using AgroVision.Application.Interfaces.Repositories;
 using AgroVision.Application.Interfaces.Services;
 using AgroVision.Domain.Entities;
+using AgroVision.Domain.Exceptions;
 
 namespace AgroVision.Application.Services;
 
@@ -51,7 +52,7 @@ public class PlantacaoService : IPlantacaoService
         var usuarioExiste = await _usuarioRepository.ExistsAsync(dto.UsuarioId);
 
         if (!usuarioExiste)
-            throw new Exception("Usuário informado não encontrado.");
+            throw new DomainException("Usuário informado não encontrado.");
 
         var plantacao = new Plantacao(
             dto.UsuarioId,

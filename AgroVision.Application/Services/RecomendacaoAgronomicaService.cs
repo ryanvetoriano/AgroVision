@@ -2,6 +2,7 @@
 using AgroVision.Application.Interfaces.Repositories;
 using AgroVision.Application.Interfaces.Services;
 using AgroVision.Domain.Entities;
+using AgroVision.Domain.Exceptions;
 
 namespace AgroVision.Application.Services;
 
@@ -53,7 +54,7 @@ public class RecomendacaoAgronomicaService : IRecomendacaoAgronomicaService
         var analiseExiste = await _analiseDroneRepository.ExistsAsync(dto.AnaliseDroneId);
 
         if (!analiseExiste)
-            throw new Exception("Análise de drone informada não encontrada.");
+            throw new DomainException("Análise de drone informada não encontrada.");
 
         var recomendacao = new RecomendacaoAgronomica(
             dto.AnaliseDroneId,

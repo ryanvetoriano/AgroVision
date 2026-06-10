@@ -1,6 +1,7 @@
 using AgroVision.Application;
 using AgroVision.Domain.Exceptions;
 using AgroVision.Infrastructure;
+using Microsoft.OpenApi;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,10 +17,15 @@ builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen(options =>
 {
-    options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+    options.SwaggerDoc("v1", new OpenApiInfo
     {
         Title = "AgroVision API",
+        Summary = null,
         Version = "v1",
+        TermsOfService = null,
+        Contact = null,
+        License = null,
+        Extensions = null,
         Description = "API para análise e diagnóstico de plantações utilizando drones."
     });
 });

@@ -1,6 +1,63 @@
 @AgroVision_HostAddress = http://localhost:5039
 
-GET {{AgroVision_HostAddress}}/weatherforecast/
+### Criar usuário
+POST {{AgroVision_HostAddress}}/api/usuarios
+Content-Type: application/json
+
+{
+  "cpf": 12345678901,
+  "nome": "João da Silva",
+  "senha": "senha123",
+  "nomeFazenda": "Fazenda Boa Vista"
+}
+
+### Listar usuários
+GET {{AgroVision_HostAddress}}/api/usuarios
 Accept: application/json
 
-###
+### Criar plantação (UsuarioId deve existir)
+POST {{AgroVision_HostAddress}}/api/plantacoes
+Content-Type: application/json
+
+{
+  "usuarioId": 1,
+  "tipoPlantio": "Sequeiro",
+  "cultura": "Soja",
+  "areaPlantio": 120.5,
+  "produtividadeEstimada": 3.2,
+  "dataPlantio": "2026-01-15T00:00:00",
+  "localPlantio": "Talhão Norte",
+  "statusPlantio": "PLANTADO"
+}
+
+### Listar plantações ativas
+GET {{AgroVision_HostAddress}}/api/plantacoes/ativas
+Accept: application/json
+
+### Criar drone
+POST {{AgroVision_HostAddress}}/api/drones
+Content-Type: application/json
+
+{
+  "codigoIdentificacao": "DRN-001",
+  "modelo": "Agras T40",
+  "fabricante": "DJI",
+  "autonomiaMinutos": 25
+}
+
+### Criar análise de drone (gera diagnóstico automático)
+POST {{AgroVision_HostAddress}}/api/analisesdrone
+Content-Type: application/json
+
+{
+  "plantacaoId": 1,
+  "missaoDroneId": null,
+  "dataAnalise": "2026-02-01T10:00:00",
+  "indiceSaude": 85,
+  "umidadeSolo": 45,
+  "temperaturaMedia": 27.5,
+  "indiceVegetacaoNdvi": 0.72,
+  "areaAfetadaPercentual": 5,
+  "pragasDetectadas": false,
+  "observacaoImagem": "Vegetação homogênea, sem falhas visíveis."
+}
