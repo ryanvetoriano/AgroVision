@@ -16,7 +16,10 @@ public static class DependencyInjection
         var connectionString = configuration.GetConnectionString("OracleConnection");
 
         services.AddDbContext<AgroVisionContext>(options =>
-            options.UseOracle(connectionString));
+            options.UseOracle(
+                connectionString,
+                oracleOptions => oracleOptions.UseOracleSQLCompatibility(
+                    OracleSQLCompatibility.DatabaseVersion19)));
 
         services.AddScoped<IUsuarioRepository, UsuarioRepository>();
         services.AddScoped<IPlantacaoRepository, PlantacaoRepository>();

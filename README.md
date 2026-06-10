@@ -503,7 +503,7 @@ Há três formas de validar a API:
 
 ## 🎬 Vídeos
 
-- 🎥 **Demonstração da solução (máx. 8 min):** _adicionar link_
+- 🎥 **Demonstração da solução (máx. 8 min):** https://youtu.be/Whpe25KClXc
 - 🎤 **Pitch (máx. 3 min):**  https://youtu.be/IPzGYReVR3w
 
 ---
