@@ -12,7 +12,7 @@ using Oracle.EntityFrameworkCore.Metadata;
 namespace AgroVision.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(AgroVisionContext))]
-    [Migration("20260609041258_InitialCreate")]
+    [Migration("20260610013414_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
