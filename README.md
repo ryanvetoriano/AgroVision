@@ -504,17 +504,19 @@ Há três formas de validar a API:
 ## 🎬 Vídeos
 
 - 🎥 **Demonstração da solução (máx. 8 min):** _adicionar link_
-- 🎤 **Pitch (máx. 3 min):** _adicionar link_
+- 🎤 **Pitch (máx. 3 min):**  https://youtu.be/IPzGYReVR3w
 
 ---
 
 ## 👥 Equipe
 
-| Nome | RM | GitHub |
-|------|----|--------|
-| _Integrante 1_ | _RMxxxxxx_ | _@usuario_ |
-| _Integrante 2_ | _RMxxxxxx_ | _@usuario_ |
-| _Integrante 3_ | _RMxxxxxx_ | _@usuario_ |
+| Nome                | RM         |
+|---------------------|------------|
+| _Ryan Vetoriano_    | _RM565667_ | 
+| _Raul Rezende_      | _RM564002_ | 
+| _João Caetano_      | _RM562074_ | 
+| _João Bueno_        | _RM564115_ | 
+| _Felipe Furlanetto_ | _RM562766_ | 
 
 ---
 
